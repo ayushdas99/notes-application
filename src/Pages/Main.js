@@ -3,9 +3,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import NotesList from '../NotesPages/NotesList';
 import Search from '../NotesPages/Search';
-import Header from './Header';
-import Footer from './Footer';
-import { MainBackground } from './MainBackground';
+import Header from '../Layout/Header';
+import Footer from '../Layout/Footer';
+import { MainBackground } from '../Layout/MainBackground';
 import styled from 'styled-components';
 
 const StyleDark = styled.div`
