@@ -12,11 +12,15 @@ display: flex;
   margin-top: 10px;
 `
 
+let styleInput = {
+    backgroundColor:'yellow'
+}
+
 
 const Search = ({ handleSearchNote }) => {
     return(
         <StyleSearch>
-            <input 
+            <input style={styleInput}
              onChange={(event) => handleSearchNote(event.target.value)}
             type='text' placeholder="Type to search...."></input>
         </StyleSearch>

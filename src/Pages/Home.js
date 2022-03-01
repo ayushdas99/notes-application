@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "../Layout/Header";
-import { MainBackground } from "../Layout/MainBackground";
-import Footer from "../Layout/Footer";
+
 
 export default function Home() {
   return (

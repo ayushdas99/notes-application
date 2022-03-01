@@ -15,6 +15,10 @@ display: flex;
   margin: 10px;
 `
 
+let styleText = {
+	backgroundColor: 'lightblue'
+}
+
 const AddNote = ({ handleAddNote }) => {
 	const [noteText, setNoteText] = useState('');
 	const characterLimit = 200;
@@ -34,7 +38,7 @@ const AddNote = ({ handleAddNote }) => {
 
 	return (
 		<StyleAddNote>
-			<textarea
+			<textarea style={styleText}
 				rows='8'
 				cols='10'
 				placeholder='Type...'

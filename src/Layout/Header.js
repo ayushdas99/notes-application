@@ -5,7 +5,9 @@ import { useState } from "react";
 import Note from "../Components/Notes";
 
 
-
+let handleToggleDarkMode = {
+    backgroundColor: 'black'
+}
 
 
 const StyleHeader = styled.header`
@@ -16,7 +18,7 @@ background-color: #A5B1DF;
 padding: 10px;
 `
 
-const Header = ({ handleToggleDarkMode}) => {
+function Header() {
     return(
         <StyleHeader>
             <nav>

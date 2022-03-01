@@ -1,13 +1,10 @@
 import React from "react";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
-import { MainBackground } from "../Layout/MainBackground";
+
 
 export default function About() {
   return (
     <div>
-      <MainBackground>
-        <Header />
+      
 
         <h1>About page</h1>
         <p>
@@ -17,8 +14,7 @@ export default function About() {
           which can be synchronised between devices using Apple's iCloud
           service.
         </p>
-      </MainBackground>
-      <Footer />
+      
     </div>
   );
 }
