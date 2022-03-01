@@ -20,15 +20,10 @@ const Note = ({id, text, date, handleDeleteNote}) => {
     return(
         <StyleNote>
             <span>{text}</span>
-            <div className="note-footer">
+            <div>
                 <small>{date}</small>
-                <button onClick={() => handleDeleteNote(id)}>Delete</button>
-                
-                
+                <button onClick={() => handleDeleteNote(id)}>Delete</button>     
             </div>
-
-
-
         </StyleNote>
     )
 };

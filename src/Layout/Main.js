@@ -6,6 +6,11 @@ import Search from '../NotesPages/Search';
 import Header from './Header';
 import Footer from './Footer';
 import { MainBackground } from './MainBackground';
+import styled from 'styled-components';
+
+const StyleDark = styled.div`
+background-color: black;
+`
 
 
 
@@ -42,34 +47,29 @@ const Main = () => {
   const[searchText, setSearchText] = useState('')
 
   const[darkMode, setDarkMode] = useState(false); 
-  
-
-  useEffect(() => {
-    localStorage.setItem('notes-app', JSON.stringify(notes));
-
-  }, [notes])
 
   const addNote = (text) => {
-    const date = new Date();
-    const newNote = {
-      id: nanoid(),
-      text: text,
-      date: date.toLocaleDateString(),
-    };
-    const newNotes = [...notes, newNote];
-    setNotes(newNotes);
-  };
+		const date = new Date();
+		const newNote = {
+			id: nanoid(),
+			text: text,
+			date: date.toLocaleDateString(),
+		}
+		const newNotes = [...notes, newNote];
+		setNotes(newNotes);
+	};
 
+  
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id )
     setNotes(newNotes);
   };
 
   return(
-    <div>
+    <div className={`${darkMode && <StyleDark/>}`}>
       
     <MainBackground>
-    <div className='container'>
+    <div>
       <Header handleToggleDarkMode={setDarkMode} />
       <Search handleSearchNote={setSearchText} />
       <NotesList notes={notes.filter((note) =>

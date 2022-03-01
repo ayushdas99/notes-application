@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyleFooter = styled.div`
 background-color: #6568C3;
 text-align: center;
-padding: 20px;
+padding: 15px;
 box-sizing: border-box;
 `
 

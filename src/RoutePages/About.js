@@ -1,14 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header from '../Layout/Header';
 import Footer from '../Layout/Footer';
 import { MainBackground } from '../Layout/MainBackground';
 
 
-const StyleAbout = styled.div`
-background-color: lightpink;
-padding: 10px;
-`
+
 
 export default function About() {
   return(
