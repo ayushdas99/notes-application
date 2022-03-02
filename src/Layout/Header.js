@@ -5,9 +5,6 @@ import { useState } from "react";
 import Note from "../Components/Notes";
 
 
-let handleToggleDarkMode = {
-    backgroundColor: 'black'
-}
 
 const StyleHeader = styled.header`
 display: flex;
@@ -31,7 +28,6 @@ const Header = ({ handleToggleDarkMode,counter}) => {
             <button>
                 <Link to="/about">About us</Link>
             </button>
-        
             <button onClick={ () => handleToggleDarkMode((prevDarkMode) => !prevDarkMode)}>Toggle</button>
             </nav>        
         </StyleHeader>
