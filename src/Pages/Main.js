@@ -1,18 +1,19 @@
 import { nanoid } from "nanoid";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import NotesList from "../Components/NotesList";
 import Search from "../Components/Search";
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
 import { MainBackground } from "../Layout/MainBackground";
 import styled from "styled-components";
-
+import LayoutContext from "../context/Layout";
 const StyleDark = styled.div`
   background-color: black;
 `;
 
 const Main = () => {
+  const Layout = useContext(LayoutContext)
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
@@ -54,6 +55,7 @@ const Main = () => {
     };
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
+    Layout.setCounter(newNotes.length);
   };
 
   const deleteNote = (id) => {
