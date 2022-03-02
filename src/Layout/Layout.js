@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { LayoutProvider } from "../context/Layout";
 const Layout = ({ children }) => {
-  const [counter,setCounter] = useState(0);
+  const [counter,setCounter] = useState(5);
   return (
     <>
       <LayoutProvider value={{setCounter}} >

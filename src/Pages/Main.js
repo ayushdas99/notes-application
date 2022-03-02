@@ -5,6 +5,10 @@ import NotesList from "../Components/NotesList";
 import Search from "../Components/Search";
 import styled from "styled-components";
 import LayoutContext from "../context/Layout";
+import { ToggleMode } from "../Layout/ToggleMode";
+import Header from "../Layout/Header";
+
+
 const StyleDark = styled.div`
   background-color: black;
 `;
@@ -58,10 +62,14 @@ const Main = () => {
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
+    Layout.setCounter(newNotes.length)
   };
 
+  
+
   return (
-    <div>
+    <div className={`${darkMode && {ToggleMode}}`}>
+      
       <Search handleSearchNote={setSearchText} />
       <NotesList
         notes={notes.filter((note) =>
@@ -69,6 +77,7 @@ const Main = () => {
         )}
         handleAddNote={addNote}
         handleDeleteNote={deleteNote}
+        
       />
     </div>
   );

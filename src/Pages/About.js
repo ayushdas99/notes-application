@@ -1,7 +1,18 @@
 import React from "react";
+import LayoutContext from "../context/Layout";
+import { useContext } from "react";
+//import Layout from "../Layout/Layout";
 
 
 export default function About() {
+
+  const Reset = useContext(LayoutContext)
+  
+  const handleReset = () => {
+    
+    Reset.setCounter(5);
+  }
+
   return (
     <div>
       
@@ -14,6 +25,7 @@ export default function About() {
           which can be synchronised between devices using Apple's iCloud
           service.
         </p>
+        <button onClick={handleReset}>Reset</button>
       
     </div>
   );

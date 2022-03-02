@@ -1,8 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import LayoutContext from "../context/Layout";
 
 
 export default function Home() {
+
+  const Reset = useContext(LayoutContext)
+  
+  const handleReset = () => {
+    
+    Reset.setCounter(5);
+
+  }
+
   return (
     // <div>
     <>
@@ -12,6 +23,7 @@ export default function Home() {
       <p>
         <Link to="/about">About us</Link>
       </p>
+      <button onClick={handleReset}>Reset</button>
     </>
     // </div>
   );
