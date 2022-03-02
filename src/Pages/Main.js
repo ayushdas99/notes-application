@@ -3,9 +3,6 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import NotesList from "../Components/NotesList";
 import Search from "../Components/Search";
-import Header from "../Layout/Header";
-import Footer from "../Layout/Footer";
-import { MainBackground } from "../Layout/MainBackground";
 import styled from "styled-components";
 import LayoutContext from "../context/Layout";
 const StyleDark = styled.div`
