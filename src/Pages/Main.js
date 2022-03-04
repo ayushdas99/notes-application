@@ -69,7 +69,6 @@ const Main = () => {
 
   return (
     <div className={`${darkMode && {ToggleMode}}`}>
-      
       <Search handleSearchNote={setSearchText} />
       <NotesList
         notes={notes.filter((note) =>
