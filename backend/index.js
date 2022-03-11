@@ -11,20 +11,8 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.post('/register', (req,res) => {
-  const{username, password} = req.body;
-  bcrypt.hash(password, 10)
-  .then()
-  res.json("register")
-});
-
-app.post('/login', (req,res) => {
-  res.json("login")
-});
-
-app.get('/profile', (req,res) => {
-  res.json("register")
-});
+app.use('/goals', require('./routes/goalRoutes'))
+app.use('/users', require('./routes/userRoutes'))
 
 
 
