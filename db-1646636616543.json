@@ -1,0 +1,16 @@
+{
+  "players": [
+    {
+      "title": "Virat",
+      "body": "Clearly the best player in the current generation.",
+      "author": "Das",
+      "id": 1
+    },
+    {
+      "title": "Rohit",
+      "body": "The next best player in the current generation.",
+      "author": "Das",
+      "id": 2
+    }
+  ]
+}
