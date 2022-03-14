@@ -1,10 +1,11 @@
 const express = require('express')
-const dotenv = require('dotenv')
 const port = 3001
-const connectDB = require('./config/db')
-const bcrypt = require('bcryptjs')
+const { errorHandler } = require('./middleware/userMiddleware')
+const mongoose = require('mongoose')
 
-connectDB()
+require('dotenv/config')
+
+
 
 const app = express()
 
@@ -13,6 +14,12 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/goals', require('./routes/goalRoutes'))
 app.use('/users', require('./routes/userRoutes'))
+
+app.use(errorHandler)
+
+mongoose.connect(process.env.DB_CONNECTION, ()=> {
+  console.log('Connected to db')
+})
 
 
 
