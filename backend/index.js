@@ -1,9 +1,9 @@
 const express = require('express')
 const port = 3001
-const { errorHandler } = require('./middleware/userMiddleware')
+const { errorHandler } = require('./middleware/errorMiddleware')
 const mongoose = require('mongoose')
 
-require('dotenv/config')
+require('dotenv').config()
 
 
 
@@ -17,12 +17,12 @@ app.use('/users', require('./routes/userRoutes'))
 
 app.use(errorHandler)
 
-mongoose.connect(process.env.DB_CONNECTION, ()=> {
-  console.log('Connected to db')
+mongoose.connect('mongodb+srv://reactuser:user123@cluster-react-app.mvywr.mongodb.net/mernapp?retryWrites=true&w=majority', { useNewUrlParser: true }, () => {
+  console.log('Connected to DB')
 })
 
 
 
 app.listen(port, () => {
-    console.log(`Server listening on ${port}`);
-  });
+  console.log(`Server listening on ${port}`)
+})
