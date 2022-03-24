@@ -6,7 +6,6 @@ import Search from "../Components/Search";
 import styled from "styled-components";
 import LayoutContext from "../context/Layout";
 import { ToggleMode } from "../Layout/ToggleMode";
-import Header from "../Layout/Header";
 
 
 const StyleDark = styled.div`
