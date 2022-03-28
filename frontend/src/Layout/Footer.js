@@ -14,7 +14,7 @@ export default function Footer(){
     return(
         <StyleFooter>
         <p>Author: Ayush Das</p>
-        <p><a href="#">ayushdas@yahoo.com</a></p>
+        <p><a href="#">das@ongraph.com</a></p>
       </StyleFooter> 
     )
 }

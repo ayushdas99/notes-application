@@ -33,10 +33,7 @@ const Header = ({ handleToggleDarkMode,counter}) => {
         <StyleHeader>
             <nav>
             <h1>Notes Application</h1>
-            <h3>Counter:{counter}</h3>
-            <button>
-                <Link to="/main">Main</Link>
-            </button>
+            <h3>-Ayush Das</h3>
             <button>
                 <Link to="/home">Home page</Link>
             </button>

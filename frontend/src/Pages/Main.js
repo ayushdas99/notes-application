@@ -22,16 +22,6 @@ const Main = () => {
     },
     {
       id: nanoid(),
-      text: "The most important day of my life!",
-      date: "14/02/2022",
-    },
-    {
-      id: nanoid(),
-      text: "When people thought coding was tough!",
-      date: "14/02/2022",
-    },
-    {
-      id: nanoid(),
       text: "Memories for a lifetime!",
       date: "14/02/2022",
     },
