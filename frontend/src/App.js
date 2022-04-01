@@ -7,6 +7,8 @@ import Layout from "./Layout/Layout";
 import Dashboard from "./Pages/Dashboard";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login"
+import Blog from './Pages/Blog'
+import Know from "./Pages/Know";
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/about" exact element={<About />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/know" element={<Know />} />
       </Routes>
     </Layout>
   );
