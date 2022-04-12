@@ -76,7 +76,7 @@ h3 {
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 50px;
   padding: 0 20px;
@@ -86,27 +86,6 @@ h3 {
   color: #828282;
 }
 
-.goals {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.goal {
-  background-color: #f4f4f4;
-  margin: 10px 0;
-  padding: 20px 0 10px;
-  position: relative;
-}
-
-.goal .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
 
 .form,
 .content {
@@ -212,4 +191,12 @@ h3 {
   .heading p {
     font-size: 1.5rem;
   }
+}
+
+.goal {
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
 }

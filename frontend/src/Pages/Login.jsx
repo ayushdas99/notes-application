@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../auth/authSlice'
+import Main from './Main'
 
 export default function Login() {
   const [formData, setFormData] = useState({  
