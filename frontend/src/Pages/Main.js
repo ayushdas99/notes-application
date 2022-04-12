@@ -5,12 +5,9 @@ import NotesList from "../Components/NotesList";
 import Search from "../Components/Search";
 import styled from "styled-components";
 import LayoutContext from "../context/Layout";
-import { ToggleMode } from "../Layout/ToggleMode";
+import Header from "../Layout/Header";
+import Toggle from "../Components/Toggle";
 
-
-const StyleDark = styled.div`
-  background-color: black;
-`;
 
 const Main = () => {
   const Layout = useContext(LayoutContext)
@@ -34,7 +31,7 @@ const Main = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [ darkMode, setDarkMode] = useState(false)
 
   const addNote = (text) => {
     const date = new Date();
@@ -57,7 +54,10 @@ const Main = () => {
   
 
   return (
-    <div className={`${darkMode && {ToggleMode}}`}>
+    <div className={`${darkMode && 'dark-mode'}`}>
+    <div className='container'>
+      <Toggle handleToggleDarkMode={setDarkMode} />
+     
       <Search handleSearchNote={setSearchText} />
       <NotesList
         notes={notes.filter((note) =>
@@ -67,6 +67,7 @@ const Main = () => {
         handleDeleteNote={deleteNote}
         
       />
+    </div>
     </div>
   );
 };

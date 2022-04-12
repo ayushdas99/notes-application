@@ -41,9 +41,6 @@ const Header = ({ handleToggleDarkMode,counter}) => {
                 <Link to="/about">About us</Link>
             </button>
             <button>
-                <Link to="/blog">Blog</Link>
-            </button>
-            <button>
                 <Link to="/main">Main</Link>
             </button>
             <ul>

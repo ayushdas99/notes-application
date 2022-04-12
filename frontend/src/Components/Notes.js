@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components";
+import { FaTrash } from "react-icons/fa";
 
 
 const StyleNote = styled.div`
@@ -22,7 +23,9 @@ const Note = ({id, text, date, handleDeleteNote}) => {
             <span>{text}</span>
             <div>
                 <small>{date}</small>
-                <button onClick={() => handleDeleteNote(id)}>Delete</button>     
+                <button onClick={() => handleDeleteNote(id)}>
+                    Delete<FaTrash />
+                </button>     
             </div>
         </StyleNote>
     )

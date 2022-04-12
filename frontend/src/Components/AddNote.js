@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import styled from 'styled-components';
+import { FaSave } from 'react-icons/fa';
 
 const StyleAddNote = styled.div`
 display: flex;
@@ -49,7 +50,7 @@ const AddNote = ({ handleAddNote }) => {
 					{characterLimit - noteText.length} Remaining
 				</small>
 				<button onClick={handleSaveClick}>
-					Save
+					Save<FaSave />
 				</button>
 			</div>
 		</StyleAddNote>

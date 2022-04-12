@@ -11,7 +11,9 @@ import Blog from './Pages/Blog'
 import Know from "./Pages/Know";
 
 const App = () => {
+  
   return (
+   
     <Layout>
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/know" element={<Know />} />
       </Routes>
     </Layout>
+   
   );
 };
 

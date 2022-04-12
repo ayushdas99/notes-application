@@ -9,6 +9,7 @@ import NoteItem from "../Components/NoteItem";
 
 
 
+
 export default function Dashboard(){
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -50,7 +51,7 @@ export default function Dashboard(){
             ))}
           </div>
         ) : (
-          <h3>You have not added any notes</h3>
+          <h3>You haven't added any notes yet!</h3>
         )}
       </section>
         
